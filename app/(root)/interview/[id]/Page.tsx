@@ -11,14 +11,8 @@ import {
 import { getCurrentUser } from "@/lib/actions/auth.action";
 import DisplayTechIcons from "@/components/DisplayTechIcons";
 
-type RouteParams = {
-  params: {
-    id: string;
-  };
-};
-
 const InterviewDetails = async ({ params }: RouteParams) => {
-  const { id } = params;
+  const  id  = await params;
 
 
   const user = await getCurrentUser();
